@@ -7,28 +7,27 @@ Encodes images into shares using halftone visual cryptography. Both shares are n
 
 **Encoded Shares**
 
-<img src="https://dl.dropboxusercontent.com/s/o26ruh20vwabeyw/share-0.png?dl=0" width="213" height="142" />
-<img src="https://dl.dropboxusercontent.com/s/ykhaezaq0dolyt6/share-1.png?dl=0" width="213" height="142" />
+<img src="https://dl.dropboxusercontent.com/s/o26ruh20vwabeyw/share-0.png?dl=0" width="213" height="142" /> <img src="https://dl.dropboxusercontent.com/s/ykhaezaq0dolyt6/share-1.png?dl=0" width="213" height="142" />
 
 **Decoded Image**
 
 <img src="https://dl.dropboxusercontent.com/s/vfgcuk66pdsd647/combined.png?dl=0" width="213" height="142" />
 
-##Quickstart##
+## Quickstart
 
-##Build##
+## Build
 Download [the latest JAR](https://github.com/Zaloum/halftone-cryptography/raw/master/halftone-crypto.jar) or 
 download the source files and build using Maven:
 
 ```mvn clean package```
 
-##Run##
+## Run
 
-####Command Line####
+#### Command Line
 
 ```java -jar [jar-name].jar``` followed by user specified args
 
-####Args####
+#### Args
 
 ```-encode [file name]``` encodes the specified file in to two shares
 
@@ -40,7 +39,7 @@ download the source files and build using Maven:
 
 ```-colors [color1] [color2]``` the foreground and background colors as either a java awt color or as a rgb combined integer (default: black, white)
 
-##Examples##
+## Examples
 
 Encodes the image _car.jpeg_ into two shares _car-share-0.bmp_, _car-share-1.bmp_.
 
@@ -51,12 +50,12 @@ being colored blue.
 
 ```-decode car-share-0.bmp car-share-1.bmp -out car-decoded -colors blue white```
 
-##Issues##
+## Issues
 
 Can throw an OutOfMemoryError for very large images. Can be fixed by assigning more memory to the JVM:
 
 ```java -Xmx1g -Xms1g -jar [jar-name].jar``` assigns 1gb of memory
 
-##License##
+## License
 
 [Public domain CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/)
